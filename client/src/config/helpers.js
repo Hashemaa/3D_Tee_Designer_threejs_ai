@@ -32,3 +32,18 @@ export const getContrastingColor = (color) => {
   // Return black or white depending on the brightness
   return brightness > 128 ? "black" : "white";
 };
+
+export const preventWhiteColor = (color) => {
+  // Remove the '#' character if it exists
+  const hex = color.replace("#", "");
+
+  // Convert the hex string to RGB values
+  const r = parseInt(hex.substring(0, 2), 16);
+  const g = parseInt(hex.substring(2, 4), 16);
+  const b = parseInt(hex.substring(4, 6), 16);
+
+  const generatedColor = `rgb(${r}, ${g}, ${b})`;
+  const targetColor = "rgb(255, 255, 255)";
+
+  return generatedColor === targetColor ? "#000" : color;
+};

@@ -1,21 +1,19 @@
-import React from 'react'
-
 import CustomButton from "./CustomButton";
 
-const AIPicker = ({prompt, setPrompt, generatingImg, handleSubmit}) => {
+const AIPicker = ({ prompt, setPrompt, generatingImg, handleSubmit }) => {
   return (
-    <div className='aipicker-container'>
+    <div className="aipicker-container">
       <textarea
-        placeholder='Ask AI... '
+        placeholder="Ask AI... "
         rows={5}
         value={prompt}
         onChange={(e) => setPrompt(e.target.value)}
-        className='aipicker-textarea' 
+        className="aipicker-textarea"
       />
-      <div className='flex flex-wrap gap-3'>
+      <div className="flex flex-wrap gap-3">
         {generatingImg ? (
-          <CustomButton 
-            type="outline" 
+          <CustomButton
+            type="outline"
             title="Asking AI..."
             customStyles="text-xs"
           />
@@ -24,21 +22,21 @@ const AIPicker = ({prompt, setPrompt, generatingImg, handleSubmit}) => {
             <CustomButton
               type="outline"
               title="AI Logo"
-              handleClick={() => handleSubmit('logo')}
+              handleClick={() => handleSubmit("logo")}
               customStyles="text-xs"
             />
 
             <CustomButton
               type="filld"
               title="AI Full"
-              handleClick={() => handleSubmit('full')}
+              handleClick={() => handleSubmit("full")}
               customStyles="text-xs"
             />
           </>
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AIPicker
+export default AIPicker;

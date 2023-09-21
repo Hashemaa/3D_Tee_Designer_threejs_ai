@@ -28,11 +28,11 @@ html {
 }
 
 .head-text {
-  @apply xl:text-[10rem] text-[6rem] xl:leading-[11rem] leading-[7rem] font-black text-[#70CACF];
+  @apply xl:text-[10rem] md:text-[6rem] text-[4rem] xl:leading-[11rem] md:leading-[7rem] leading-[5rem] font-black text-[#70CACF];
 }
 
 .head-text-pink {
-  @apply xl:text-[10rem] text-[6rem] xl:leading-[11rem] leading-[7rem] font-black text-[#F37FAC];
+  @apply xl:text-[10rem] md:text-[6rem] text-[4rem] xl:leading-[11rem] md:leading-[7rem] leading-[5rem] font-black text-[#F37FAC];
 }
 
 .download-btn {
